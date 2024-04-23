@@ -28,6 +28,8 @@ public class ServerTimeNotifier : BackgroundService
             await _context.Clients
                 .User("f45fe475-8466-484f-af69-a2658a8ee915")
                 .ReceiveNotification($"Server time = {dateTime}");
+            
+            
         }
     }
 }

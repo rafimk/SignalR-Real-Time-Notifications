@@ -27,7 +27,7 @@ Messages from the server 👇
         _hubConnection = new HubConnectionBuilder()
             .WithUrl(
                 "http://localhost:5000/notifications",
-                o => o.AccessTokenProvider = () => Task.FromResult<string?>("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImY0NWZlNDc1LTg0NjYtNDg0Zi1hZjY5LWEyNjU4YThlZTkxNSIsInN1YiI6ImY0NWZlNDc1LTg0NjYtNDg0Zi1hZjY5LWEyNjU4YThlZTkxNSIsImp0aSI6IjExNmZlZDEzIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NjE3MTEiLCJodHRwczovL2xvY2FsaG9zdDo0NDM3OCIsImh0dHA6Ly9sb2NhbGhvc3Q6NTAyNiIsImh0dHBzOi8vbG9jYWxob3N0OjcyNTQiXSwibmJmIjoxNjk0NTk2MjgxLCJleHAiOjE3MDI0NTg2ODEsImlhdCI6MTY5NDU5NjI4MiwiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.d5ChFbuBrtX954QUpOMd9pgNVqol_Ux3PWdz3xhXkFc"))
+                o => o.AccessTokenProvider = () => Task.FromResult<string?>("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImY0NWZlNDc1LTg0NjYtNDg0Zi1hZjY5LWEyNjU4YThlZTkxNSIsInN1YiI6ImY0NWZlNDc1LTg0NjYtNDg0Zi1hZjY5LWEyNjU4YThlZTkxNSIsImp0aSI6IjRhZDhhZDIiLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzNzgiXSwibmJmIjoxNzEzODkyODczLCJleHAiOjE3MjE3NTUyNzMsImlhdCI6MTcxMzg5Mjg3NCwiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.wvn-A1CirE9VR6qmLiWZoXJRgavDgve9xi4RZjajnRE"))
             .Build();
 
         _hubConnection.On<string>("ReceiveNotification", message =>
